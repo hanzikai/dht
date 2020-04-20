@@ -9,11 +9,11 @@ int main()
     std::cout<< "start corountine" << std::endl;
     coro_int2::pull_type source(
             [&](coro_int2::push_type& sink){
-                std::cout<< " sink1" << std::endl;  
+                std::cout<< "sink1" << std::endl;  
                 sink(1); // push {1} back to main-context
-                std::cout<< " sink2" << std::endl;
+                std::cout<< "sink2" << std::endl;
                 sink(2); // push {2} back to main-context
-                std::cout<< " sink3" << std::endl;
+                std::cout<< "sink3" << std::endl;
                 sink(3); // push {3} back to main-context
             }
         );
